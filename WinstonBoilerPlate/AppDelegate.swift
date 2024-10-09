@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         //
         // Create a new instance of ViewController
-        let mainViewController = ViewController()
+        let mainViewController = UINavigationController(rootViewController: MenuViewController())
         //
         // Set the initial View Controller to our instance of ViewController
         window?.rootViewController = mainViewController

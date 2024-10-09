@@ -1,29 +1,43 @@
 PODS:
-  - Nuke (9.5.1)
+  - Gifu (3.3.1)
+  - Nuke (10.11.2)
+  - NukeUI (0.8.1):
+    - Gifu (~> 3.0)
+    - Nuke (~> 10.5)
   - TinyConstraints (4.0.2)
 
 DEPENDENCIES:
-  - "Nuke (from `git@github.com:kean/Nuke.git`, tag `10.3.0`)"
+  - "Nuke (from `git@github.com:kean/Nuke.git`, tag `10.11.2`)"
+  - "NukeUI (from `git@github.com:kean/NukeUI.git`, tag `0.8.3`)"
   - TinyConstraints
 
 SPEC REPOS:
   trunk:
+    - Gifu
     - TinyConstraints
 
 EXTERNAL SOURCES:
   Nuke:
     :git: "git@github.com:kean/Nuke.git"
-    :tag: 10.3.0
+    :tag: 10.11.2
+  NukeUI:
+    :git: "git@github.com:kean/NukeUI.git"
+    :tag: 0.8.3
 
 CHECKOUT OPTIONS:
   Nuke:
     :git: "git@github.com:kean/Nuke.git"
-    :tag: 10.3.0
+    :tag: 10.11.2
+  NukeUI:
+    :git: "git@github.com:kean/NukeUI.git"
+    :tag: 0.8.3
 
 SPEC CHECKSUMS:
-  Nuke: 2c1e5d49c9f92433c7f74a78b21292853aeda727
+  Gifu: 416d4e38c4c2fed012f019e0a1d3ffcb58e5b842
+  Nuke: 6b14bc2549b5558bf351905298403271973c5a80
+  NukeUI: 3c7ec7b299dd99707afdc783b436f39768b4493b
   TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
 
-PODFILE CHECKSUM: c30da85fcd3e4cd8c8509e752834bd75ab5e5ca1
+PODFILE CHECKSUM: 109343f4260995b0f8fec19908a97b90021383fe
 
 COCOAPODS: 1.15.2
