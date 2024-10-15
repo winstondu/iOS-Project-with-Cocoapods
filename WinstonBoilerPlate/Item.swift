@@ -6,7 +6,7 @@
 //  Copyright © 2024 Dougly. All rights reserved.
 //
 
-// MARK - MenuItem
+// MARK: - MenuItem
 
 import Foundation
 
@@ -15,4 +15,3 @@ struct Item: Identifiable {
     let title: String
     let url: URL
 }
-

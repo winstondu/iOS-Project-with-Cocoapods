@@ -6,18 +6,17 @@
 //  Copyright © 2024 Dougly. All rights reserved.
 //
 
-
-import UIKit
 import Nuke
 import SwiftUI
+import UIKit
 
 final class MenuViewController: UITableViewController {
     private var sections = [MenuSection]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MenuItemCell");
+
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MenuItemCell")
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Network Logs", style: .plain, target: self, action: #selector(showAlert))
 
@@ -30,11 +29,10 @@ final class MenuViewController: UITableViewController {
                 title: "SwiftUI Example",
                 subtitle: "To go into SwiftUI Land",
                 action: { [weak self] in self?.push(UIHostingController(rootView: ImageDemoView()), $0) }
-            )
+            ),
         ]
         return MenuSection(title: "General", items: items)
     }
-
 
     private var secondSection: MenuSection {
         var items = [
@@ -42,7 +40,7 @@ final class MenuViewController: UITableViewController {
                 title: " (UIKit)",
                 subtitle: "UICollectionView Prefetching",
                 action: { [weak self] in self?.push(ViewController(), $0) }
-            )
+            ),
         ]
 
         return MenuSection(title: "Advanced", items: items)
@@ -57,22 +55,23 @@ final class MenuViewController: UITableViewController {
         let alert = UIAlertController(
             title: "Test",
             message: "This is an Alert",
-            preferredStyle: .alert)
+            preferredStyle: .alert
+        )
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
     }
 
     // MARK: Table View
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in _: UITableView) -> Int {
         sections.count
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
         sections[section].items.count
     }
 
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_: UITableView, titleForHeaderInSection section: Int) -> String? {
         sections[section].title
     }
 
@@ -84,13 +83,13 @@ final class MenuViewController: UITableViewController {
         return cell
     }
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = sections[indexPath.section].items[indexPath.row]
         item.action?(item)
     }
 }
 
-// MARK - MenuItem
+// MARK: - MenuItem
 
 private struct MenuItem {
     typealias Action = ((MenuItem) -> Void)

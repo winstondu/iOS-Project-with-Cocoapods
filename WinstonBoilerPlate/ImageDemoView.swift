@@ -1,4 +1,6 @@
 //
+import Nuke
+import NukeUI
 //  ContentView.swift
 //  WinstonBoilerPlate
 //
@@ -6,8 +8,6 @@
 //  Copyright © 2024 Dougly. All rights reserved.
 //
 import SwiftUI
-import Nuke
-import NukeUI
 
 @MainActor
 struct ImageDemoView: View {
@@ -40,8 +40,8 @@ struct ImageDemoView: View {
         .navigationBarItems(trailing: Button(action: {
             ImagePipeline.shared.cache.removeAll()
             self.listId = UUID()
-        }, label: {
-            Image(systemName: "arrow.clockwise")
+            }, label: {
+                Image(systemName: "arrow.clockwise")
         }))
         .listStyle(.plain)
     }
@@ -57,24 +57,24 @@ struct ImageDemoView: View {
                 Color.gray.opacity(0.2) // Placeholder
             }
         }
-            .pipeline(pipeline)
-            .frame(height: 320)
+        .pipeline(pipeline)
+        .frame(height: 320)
     }
 }
 
 extension LazyImageState {
     /// Returns an image view.
     public var swiftUIImage: SwiftUI.Image? {
-    #if os(macOS)
+        #if os(macOS)
             imageContainer.map { Image(nsImage: $0.image) }
-    #else
+        #else
             imageContainer.map { Image(uiImage: $0.image) }
-    #endif
-        }
+        #endif
+    }
 }
 
 private let allItems = [
     Item(title: "Baseline JPEG", url: URL(string: "https://user-images.githubusercontent.com/1567433/120257591-80e2e580-c25e-11eb-8032-54f3a966aedb.jpeg")!),
     Item(title: "Progressive JPEG", url: URL(string: "https://user-images.githubusercontent.com/1567433/120257587-7fb1b880-c25e-11eb-93d1-7e7df2b9f5ca.jpeg")!),
-    Item(title: "WebP", url: URL(string: "https://kean.github.io/images/misc/4.webp")!)
+    Item(title: "WebP", url: URL(string: "https://kean.github.io/images/misc/4.webp")!),
 ]
