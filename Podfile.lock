@@ -25,6 +25,7 @@ DEPENDENCIES:
   - Alamofire (~> 5.2.1)
   - "Nuke (from `git@github.com:kean/Nuke.git`, tag `10.11.2`)"
   - "NukeUI (from `git@github.com:kean/NukeUI.git`, tag `0.8.3`)"
+  - RxCocoa (~> 5.1.1)
   - RxRelay
   - RxSwift (~> 5.1.1)
   - RxSwiftExt (~> 5)
@@ -67,6 +68,6 @@ SPEC CHECKSUMS:
   RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
   TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
 
-PODFILE CHECKSUM: 285fc8ea25ee081dc684330326bcd54cc9e5fa4e
+PODFILE CHECKSUM: 4365cd43c53b2568048c03bb0849ad76fa71d4ae
 
 COCOAPODS: 1.15.2

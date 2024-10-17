@@ -12,6 +12,7 @@ source 'https://cdn.cocoapods.org/'
 target 'WinstonBoilerPlate' do
   # RxSwift
   pod 'RxSwift', '~> 5.1.1'
+  pod 'RxCocoa', '~> 5.1.1'
   pod 'RxRelay'
   pod 'RxSwiftExt', '~> 5'
 

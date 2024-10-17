@@ -6,7 +6,10 @@
 //  Copyright © 2020 Winston. All rights reserved.
 //
 
+import Alamofire
 import Nuke
+import RxCocoa
+import RxSwift
 import TinyConstraints
 import UIKit
 
@@ -15,6 +18,8 @@ class ImageDemoViewController: UIViewController {
     var titleLabel: UILabel!
     var numbersCollectionView: UICollectionView!
     var imageList: ImageList = ImageList()
+
+    var disposeBag: DisposeBag = DisposeBag()
 
     var imageLoadTasks: [ImageTask] = []
 
@@ -54,6 +59,9 @@ class ImageDemoViewController: UIViewController {
 
         buildViews()
         view.backgroundColor = .white
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: nil, action: nil)
+        navigationItem.rightBarButtonItem?.rx.tap.subscribe(onNext: pingGoogle).disposed(by: disposeBag)
     }
 
     func buildViews() {
@@ -114,6 +122,29 @@ class ImageDemoViewController: UIViewController {
         scrollView.bottomToSuperview()
         scrollView.horizontalToSuperview(insets: .horizontal(20))
         scrollView.topToBottom(of: headerView)
+    }
+
+    func pingGoogle() {
+        AF.request("https://www.google.com", method: .get, headers: [])
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case let .success(json):
+                    NSLog("\(json)")
+                    guard let dict = json as? NSDictionary else { return }
+                    NSLog("\(dict)")
+                case let .failure(responseError):
+                    if let statusCode = response.response?.statusCode {
+                        NSLog("\(statusCode)")
+                    }
+
+                    if case let AFError.sessionTaskFailed(urlError) = responseError,
+                        let urlErrorCasted = urlError as? URLError {
+                        NSLog("\(urlErrorCasted.code)")
+                    }
+                }
+                // Construct a post request encoding some info about the response
+            }
     }
 
     override func viewDidLayoutSubviews() {
