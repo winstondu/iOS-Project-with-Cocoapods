@@ -9,16 +9,21 @@
 import Nuke
 import SwiftUI
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class MenuViewController: UITableViewController {
     private var sections = [MenuSection]()
+    private var disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MenuItemCell")
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Network Logs", style: .plain, target: self, action: #selector(showAlert))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Show Alert", style: .plain, target: self, action: nil) // You could use #selector(showAlert)
+        
+        navigationItem.rightBarButtonItem?.rx.tap.subscribe(onNext: showAlert).disposed(by: disposeBag)
 
         sections = [firstSection, secondSection]
     }

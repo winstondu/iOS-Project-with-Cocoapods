@@ -78,3 +78,8 @@ private let allItems = [
     Item(title: "Progressive JPEG", url: URL(string: "https://user-images.githubusercontent.com/1567433/120257587-7fb1b880-c25e-11eb-93d1-7e7df2b9f5ca.jpeg")!),
     Item(title: "WebP", url: URL(string: "https://kean.github.io/images/misc/4.webp")!),
 ]
+
+
+#Preview {
+    ImageDemoView()
+}

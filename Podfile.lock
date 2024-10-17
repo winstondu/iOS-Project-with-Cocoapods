@@ -4,16 +4,37 @@ PODS:
   - NukeUI (0.8.1):
     - Gifu (~> 3.0)
     - Nuke (~> 10.5)
+  - RxCocoa (5.1.3):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.3):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.3)
+  - RxSwiftExt (5.2.0):
+    - RxSwiftExt/Core (= 5.2.0)
+    - RxSwiftExt/RxCocoa (= 5.2.0)
+  - RxSwiftExt/Core (5.2.0):
+    - RxSwift (~> 5.0)
+  - RxSwiftExt/RxCocoa (5.2.0):
+    - RxCocoa (~> 5.0)
+    - RxSwiftExt/Core
   - TinyConstraints (4.0.2)
 
 DEPENDENCIES:
   - "Nuke (from `git@github.com:kean/Nuke.git`, tag `10.11.2`)"
   - "NukeUI (from `git@github.com:kean/NukeUI.git`, tag `0.8.3`)"
+  - RxRelay
+  - RxSwift (~> 5.1.1)
+  - RxSwiftExt (~> 5)
   - TinyConstraints
 
 SPEC REPOS:
   trunk:
     - Gifu
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - RxSwiftExt
     - TinyConstraints
 
 EXTERNAL SOURCES:
@@ -36,8 +57,12 @@ SPEC CHECKSUMS:
   Gifu: 416d4e38c4c2fed012f019e0a1d3ffcb58e5b842
   Nuke: 6b14bc2549b5558bf351905298403271973c5a80
   NukeUI: 3c7ec7b299dd99707afdc783b436f39768b4493b
+  RxCocoa: e2ed092d5432e4296aa818021d27de4090ac0354
+  RxRelay: 5a18c2eb2d68326ebaf0112f80d837ae41b92b97
+  RxSwift: 915abbdfb62214aa89ccd0b194d44fb478019b27
+  RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
   TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
 
-PODFILE CHECKSUM: 109343f4260995b0f8fec19908a97b90021383fe
+PODFILE CHECKSUM: 1bc8d14ad7bfa83ebd854d16c35dc07e6a14b7eb
 
 COCOAPODS: 1.15.2

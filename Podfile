@@ -11,11 +11,9 @@ source 'https://cdn.cocoapods.org/'
 # Pods
 target 'WinstonBoilerPlate' do
   # RxSwift
-#  pod 'RxCocoa', '~> 5'
-#  pod 'RxDataSources', '~> 4.0.1'
-#  pod 'RxSwift', '~> 5.1.1'
-#  pod 'RxRelay'
-#  pod 'RxSwiftExt', '~> 5'
+  pod 'RxSwift', '~> 5.1.1'
+  pod 'RxRelay'
+  pod 'RxSwiftExt', '~> 5'
 
   # Image loading/caching
   pod 'Nuke', :git => 'git@github.com:kean/Nuke.git', :tag => '10.11.2'
