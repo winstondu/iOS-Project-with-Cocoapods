@@ -21,11 +21,8 @@ target 'WinstonBoilerPlate' do
 
   # UI
   pod "TinyConstraints"
-
-  #target 'WinstonBoilerPlate' do
-    #inherit! :search_paths
-    #use_frameworks!
-  #end
+  
+  pod 'Alamofire', '~> 5.2.1'
 end
 #end
 post_install do |installer|

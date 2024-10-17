@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.2.2)
   - Gifu (3.3.1)
   - Nuke (10.11.2)
   - NukeUI (0.8.1):
@@ -21,6 +22,7 @@ PODS:
   - TinyConstraints (4.0.2)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.2.1)
   - "Nuke (from `git@github.com:kean/Nuke.git`, tag `10.11.2`)"
   - "NukeUI (from `git@github.com:kean/NukeUI.git`, tag `0.8.3`)"
   - RxRelay
@@ -30,6 +32,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Gifu
     - RxCocoa
     - RxRelay
@@ -54,6 +57,7 @@ CHECKOUT OPTIONS:
     :tag: 0.8.3
 
 SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   Gifu: 416d4e38c4c2fed012f019e0a1d3ffcb58e5b842
   Nuke: 6b14bc2549b5558bf351905298403271973c5a80
   NukeUI: 3c7ec7b299dd99707afdc783b436f39768b4493b
@@ -63,6 +67,6 @@ SPEC CHECKSUMS:
   RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
   TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
 
-PODFILE CHECKSUM: 1bc8d14ad7bfa83ebd854d16c35dc07e6a14b7eb
+PODFILE CHECKSUM: 285fc8ea25ee081dc684330326bcd54cc9e5fa4e
 
 COCOAPODS: 1.15.2

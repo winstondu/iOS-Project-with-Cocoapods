@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -49,10 +49,6 @@
 		906600465DFA62A615CE64A0 /* Pods-WinstonBoilerPlate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinstonBoilerPlate.release.xcconfig"; path = "Target Support Files/Pods-WinstonBoilerPlate/Pods-WinstonBoilerPlate.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		482F56012CC173850071FDCB /* WinstonsBoilerPlateTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = WinstonsBoilerPlateTests; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
 		111575A51E845B9300A05C5E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -76,7 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				111575AA1E845B9300A05C5E /* WinstonBoilerPlate */,
-				482F56012CC173850071FDCB /* WinstonsBoilerPlateTests */,
 				48D6667824C2C9DE00B80074 /* Products */,
 				48D6667B24C2CA7D00B80074 /* WinstonsBoilerPlate.app */,
 				ECC68A7C19F99AF255109975 /* Pods */,
@@ -163,12 +158,7 @@
 			dependencies = (
 				482F56052CC173850071FDCB /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				482F56012CC173850071FDCB /* WinstonsBoilerPlateTests */,
-			);
 			name = WinstonsBoilerPlateTests;
-			packageProductDependencies = (
-			);
 			productName = WinstonsBoilerPlateTests;
 			productReference = 482F56002CC173850071FDCB /* WinstonsBoilerPlateTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -191,6 +181,7 @@
 					};
 					482F55FF2CC173850071FDCB = {
 						CreatedOnToolsVersion = 16.0;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 111575A71E845B9300A05C5E;
 					};
 				};
@@ -264,6 +255,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-WinstonBoilerPlate/Pods-WinstonBoilerPlate-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Gifu/Gifu.framework",
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 				"${BUILT_PRODUCTS_DIR}/NukeUI/NukeUI.framework",
@@ -275,6 +267,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gifu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NukeUI.framework",
@@ -422,8 +415,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -438,10 +430,7 @@
 				DEVELOPMENT_TEAM = 3QK4A3Y8M9;
 				INFOPLIST_FILE = "$(SRCROOT)/WinstonBoilerPlate/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.winston.boilerplate;
 				PRODUCT_NAME = WinstonsBoilerPlate;
 				SWIFT_OBJC_BRIDGING_HEADER = "WinstonBoilerPlate/WinstonBoilerPlate-Bridging-Header.h";
@@ -459,10 +448,7 @@
 				DEVELOPMENT_TEAM = 3QK4A3Y8M9;
 				INFOPLIST_FILE = "$(SRCROOT)/WinstonBoilerPlate/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.winston.boilerplate;
 				PRODUCT_NAME = WinstonsBoilerPlate;
 				SWIFT_OBJC_BRIDGING_HEADER = "WinstonBoilerPlate/WinstonBoilerPlate-Bridging-Header.h";
