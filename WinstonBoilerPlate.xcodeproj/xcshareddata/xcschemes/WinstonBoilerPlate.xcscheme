@@ -28,6 +28,17 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "482F55FF2CC173850071FDCB"
+               BuildableName = "WinstonsBoilerPlateTests.xctest"
+               BlueprintName = "WinstonsBoilerPlateTests"
+               ReferencedContainer = "container:WinstonBoilerPlate.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

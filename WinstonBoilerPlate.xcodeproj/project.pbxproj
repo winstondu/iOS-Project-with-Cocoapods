@@ -3,19 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		111575B31E845B9300A05C5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 111575B21E845B9300A05C5E /* Assets.xcassets */; };
 		111575B61E845B9300A05C5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 111575B41E845B9300A05C5E /* LaunchScreen.storyboard */; };
+		482F55F62CC16F190071FDCB /* HelperClass.mm in Sources */ = {isa = PBXBuildFile; fileRef = 482F55F52CC16F120071FDCB /* HelperClass.mm */; };
+		482F55F92CC170820071FDCB /* ImageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482F55F82CC1707F0071FDCB /* ImageList.swift */; };
 		486092AF24C2C58D000A3014 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111575BE1E845BE800A05C5E /* AppDelegate.swift */; };
 		486092B024C2C58D000A3014 /* ImageDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111575C11E845BE800A05C5E /* ImageDemoViewController.swift */; };
 		48AF8B7F2CB5ED2C0077D3C5 /* ImageDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF8B7E2CB5ED260077D3C5 /* ImageDemoView.swift */; };
 		48AF8B812CB5FAAA0077D3C5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF8B802CB5FAA50077D3C5 /* MenuViewController.swift */; };
-		48AF8B832CB60D660077D3C5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF8B822CB60D630077D3C5 /* Item.swift */; };
+		48AF8B832CB60D660077D3C5 /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF8B822CB60D630077D3C5 /* ImageItem.swift */; };
 		F38507E46016230BCD464FF7 /* Pods_WinstonBoilerPlate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E8CEDC6B6C2D3DD5FE13FE1 /* Pods_WinstonBoilerPlate.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		482F56042CC173850071FDCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 111575A01E845B9300A05C5E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 111575A71E845B9300A05C5E;
+			remoteInfo = WinstonBoilerPlate;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		020846AB7F5B856727A58D6C /* Pods-WinstonBoilerPlate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinstonBoilerPlate.debug.xcconfig"; path = "Target Support Files/Pods-WinstonBoilerPlate/Pods-WinstonBoilerPlate.debug.xcconfig"; sourceTree = "<group>"; };
@@ -25,12 +37,21 @@
 		111575BE1E845BE800A05C5E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		111575C11E845BE800A05C5E /* ImageDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDemoViewController.swift; sourceTree = "<group>"; };
 		1E8CEDC6B6C2D3DD5FE13FE1 /* Pods_WinstonBoilerPlate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WinstonBoilerPlate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		482F55F42CC16E6D0071FDCB /* HelperClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelperClass.h; sourceTree = "<group>"; };
+		482F55F52CC16F120071FDCB /* HelperClass.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HelperClass.mm; sourceTree = "<group>"; };
+		482F55F72CC16F1D0071FDCB /* WinstonBoilerPlate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WinstonBoilerPlate-Bridging-Header.h"; sourceTree = "<group>"; };
+		482F55F82CC1707F0071FDCB /* ImageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageList.swift; sourceTree = "<group>"; };
+		482F56002CC173850071FDCB /* WinstonsBoilerPlateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WinstonsBoilerPlateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48AF8B7E2CB5ED260077D3C5 /* ImageDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDemoView.swift; sourceTree = "<group>"; };
 		48AF8B802CB5FAA50077D3C5 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		48AF8B822CB60D630077D3C5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		48AF8B822CB60D630077D3C5 /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
 		48D6667B24C2CA7D00B80074 /* WinstonsBoilerPlate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinstonsBoilerPlate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		906600465DFA62A615CE64A0 /* Pods-WinstonBoilerPlate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinstonBoilerPlate.release.xcconfig"; path = "Target Support Files/Pods-WinstonBoilerPlate/Pods-WinstonBoilerPlate.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		482F56012CC173850071FDCB /* WinstonsBoilerPlateTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = WinstonsBoilerPlateTests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		111575A51E845B9300A05C5E /* Frameworks */ = {
@@ -41,6 +62,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		482F55FD2CC173850071FDCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -48,24 +76,30 @@
 			isa = PBXGroup;
 			children = (
 				111575AA1E845B9300A05C5E /* WinstonBoilerPlate */,
+				482F56012CC173850071FDCB /* WinstonsBoilerPlateTests */,
 				48D6667824C2C9DE00B80074 /* Products */,
 				48D6667B24C2CA7D00B80074 /* WinstonsBoilerPlate.app */,
 				ECC68A7C19F99AF255109975 /* Pods */,
 				B24477A196777F12FDED65FD /* Frameworks */,
+				482F56002CC173850071FDCB /* WinstonsBoilerPlateTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
 		111575AA1E845B9300A05C5E /* WinstonBoilerPlate */ = {
 			isa = PBXGroup;
 			children = (
+				482F55F42CC16E6D0071FDCB /* HelperClass.h */,
+				482F55F52CC16F120071FDCB /* HelperClass.mm */,
 				111575BE1E845BE800A05C5E /* AppDelegate.swift */,
 				48AF8B802CB5FAA50077D3C5 /* MenuViewController.swift */,
-				48AF8B822CB60D630077D3C5 /* Item.swift */,
+				48AF8B822CB60D630077D3C5 /* ImageItem.swift */,
 				111575C11E845BE800A05C5E /* ImageDemoViewController.swift */,
 				48AF8B7E2CB5ED260077D3C5 /* ImageDemoView.swift */,
+				482F55F82CC1707F0071FDCB /* ImageList.swift */,
 				111575B21E845B9300A05C5E /* Assets.xcassets */,
 				111575B41E845B9300A05C5E /* LaunchScreen.storyboard */,
 				111575B71E845B9300A05C5E /* Info.plist */,
+				482F55F72CC16F1D0071FDCB /* WinstonBoilerPlate-Bridging-Header.h */,
 			);
 			path = WinstonBoilerPlate;
 			sourceTree = "<group>";
@@ -116,21 +150,48 @@
 			productReference = 48D6667B24C2CA7D00B80074 /* WinstonsBoilerPlate.app */;
 			productType = "com.apple.product-type.application";
 		};
+		482F55FF2CC173850071FDCB /* WinstonsBoilerPlateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 482F56062CC173850071FDCB /* Build configuration list for PBXNativeTarget "WinstonsBoilerPlateTests" */;
+			buildPhases = (
+				482F55FC2CC173850071FDCB /* Sources */,
+				482F55FD2CC173850071FDCB /* Frameworks */,
+				482F55FE2CC173850071FDCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				482F56052CC173850071FDCB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				482F56012CC173850071FDCB /* WinstonsBoilerPlateTests */,
+			);
+			name = WinstonsBoilerPlateTests;
+			packageProductDependencies = (
+			);
+			productName = WinstonsBoilerPlateTests;
+			productReference = 482F56002CC173850071FDCB /* WinstonsBoilerPlateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		111575A01E845B9300A05C5E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Dougly;
 				TargetAttributes = {
 					111575A71E845B9300A05C5E = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 3QK4A3Y8M9;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1600;
 						ProvisioningStyle = Automatic;
+					};
+					482F55FF2CC173850071FDCB = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 111575A71E845B9300A05C5E;
 					};
 				};
 			};
@@ -149,6 +210,7 @@
 			projectRoot = "";
 			targets = (
 				111575A71E845B9300A05C5E /* WinstonBoilerPlate */,
+				482F55FF2CC173850071FDCB /* WinstonsBoilerPlateTests */,
 			);
 		};
 /* End PBXProject section */
@@ -160,6 +222,13 @@
 			files = (
 				111575B61E845B9300A05C5E /* LaunchScreen.storyboard in Resources */,
 				111575B31E845B9300A05C5E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		482F55FE2CC173850071FDCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,13 +298,30 @@
 			files = (
 				486092AF24C2C58D000A3014 /* AppDelegate.swift in Sources */,
 				48AF8B7F2CB5ED2C0077D3C5 /* ImageDemoView.swift in Sources */,
-				48AF8B832CB60D660077D3C5 /* Item.swift in Sources */,
+				48AF8B832CB60D660077D3C5 /* ImageItem.swift in Sources */,
 				486092B024C2C58D000A3014 /* ImageDemoViewController.swift in Sources */,
+				482F55F92CC170820071FDCB /* ImageList.swift in Sources */,
+				482F55F62CC16F190071FDCB /* HelperClass.mm in Sources */,
 				48AF8B812CB5FAAA0077D3C5 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		482F55FC2CC173850071FDCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		482F56052CC173850071FDCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 111575A71E845B9300A05C5E /* WinstonBoilerPlate */;
+			targetProxy = 482F56042CC173850071FDCB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		111575B41E845B9300A05C5E /* LaunchScreen.storyboard */ = {
@@ -336,7 +422,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -351,10 +438,13 @@
 				DEVELOPMENT_TEAM = 3QK4A3Y8M9;
 				INFOPLIST_FILE = "$(SRCROOT)/WinstonBoilerPlate/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.winston.boilerplate;
 				PRODUCT_NAME = WinstonsBoilerPlate;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "WinstonBoilerPlate/WinstonBoilerPlate-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -369,11 +459,88 @@
 				DEVELOPMENT_TEAM = 3QK4A3Y8M9;
 				INFOPLIST_FILE = "$(SRCROOT)/WinstonBoilerPlate/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.winston.boilerplate;
 				PRODUCT_NAME = WinstonsBoilerPlate;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "WinstonBoilerPlate/WinstonBoilerPlate-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		482F56072CC173850071FDCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.winston.test.WinstonsBoilerPlateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WinstonsBoilerPlate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WinstonsBoilerPlate";
+			};
+			name = Debug;
+		};
+		482F56082CC173850071FDCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.winston.test.WinstonsBoilerPlateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WinstonsBoilerPlate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WinstonsBoilerPlate";
 			};
 			name = Release;
 		};
@@ -394,6 +561,15 @@
 			buildConfigurations = (
 				111575BB1E845B9300A05C5E /* Debug */,
 				111575BC1E845B9300A05C5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		482F56062CC173850071FDCB /* Build configuration list for PBXNativeTarget "WinstonsBoilerPlateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				482F56072CC173850071FDCB /* Debug */,
+				482F56082CC173850071FDCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,18 +1,17 @@
 //
 import Nuke
 import NukeUI
-//  ContentView.swift
+//  ImageDemoView.swift
 //  WinstonBoilerPlate
 //
 //  Created by Winston Du on 10/8/24.
-//  Copyright © 2024 Dougly. All rights reserved.
 //
 import SwiftUI
 
 @MainActor
 struct ImageDemoView: View {
-    private let items = allItems
     @State private var listId = UUID()
+    @ObservedObject var imageList: ImageList
 
     private let pipeline = ImagePipeline {
         $0.dataLoader = {
@@ -23,12 +22,14 @@ struct ImageDemoView: View {
     }
 
     var body: some View {
-        List(items) { item in
+        List(imageList.images) { item in
             let view = VStack(spacing: 16) {
                 Text(item.title)
                     .font(.headline)
                     .padding(.top, 32)
-                makeImage(url: item.url)
+                makeImage(url: item.url).onTapGesture {
+                    imageList.images.removeLast()
+                }
             }.listRowInsets(EdgeInsets())
             if #available(iOS 15, *) {
                 view.listRowSeparator(.hidden)
@@ -73,13 +74,6 @@ extension LazyImageState {
     }
 }
 
-private let allItems = [
-    Item(title: "Baseline JPEG", url: URL(string: "https://user-images.githubusercontent.com/1567433/120257591-80e2e580-c25e-11eb-8032-54f3a966aedb.jpeg")!),
-    Item(title: "Progressive JPEG", url: URL(string: "https://user-images.githubusercontent.com/1567433/120257587-7fb1b880-c25e-11eb-93d1-7e7df2b9f5ca.jpeg")!),
-    Item(title: "WebP", url: URL(string: "https://kean.github.io/images/misc/4.webp")!),
-]
-
-
 #Preview {
-    ImageDemoView()
+    ImageDemoView(imageList: ImageList())
 }

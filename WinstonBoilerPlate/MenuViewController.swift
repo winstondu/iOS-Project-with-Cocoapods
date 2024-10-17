@@ -7,14 +7,16 @@
 //
 
 import Nuke
+import RxCocoa
+import RxSwift
 import SwiftUI
 import UIKit
-import RxSwift
-import RxCocoa
 
 final class MenuViewController: UITableViewController {
     private var sections = [MenuSection]()
     private var disposeBag = DisposeBag()
+
+    private var imageList: ImageList = ImageList()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +24,7 @@ final class MenuViewController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MenuItemCell")
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Show Alert", style: .plain, target: self, action: nil) // You could use #selector(showAlert)
-        
+
         navigationItem.rightBarButtonItem?.rx.tap.subscribe(onNext: showAlert).disposed(by: disposeBag)
 
         sections = [firstSection, secondSection]
@@ -33,7 +35,12 @@ final class MenuViewController: UITableViewController {
             MenuItem(
                 title: "SwiftUI Example",
                 subtitle: "To go into SwiftUI Land",
-                action: { [weak self] in self?.push(UIHostingController(rootView: ImageDemoView()), $0) }
+                action: { [weak self] in
+                    guard let strongSelf = self else {
+                        return
+                    }
+                    strongSelf.push(UIHostingController(rootView: ImageDemoView(imageList: strongSelf.imageList)), $0)
+                }
             ),
         ]
         return MenuSection(title: "General", items: items)
@@ -44,7 +51,14 @@ final class MenuViewController: UITableViewController {
             MenuItem(
                 title: " (UIKit)",
                 subtitle: "UICollectionView Prefetching",
-                action: { [weak self] in self?.push(ViewController(), $0) }
+                action: { [weak self] in
+                    guard let strongSelf = self else {
+                        return
+                    }
+                    let controller = ImageDemoViewController()
+                    controller.imageList = strongSelf.imageList
+                    strongSelf.push(controller, $0)
+                }
             ),
         ]
 

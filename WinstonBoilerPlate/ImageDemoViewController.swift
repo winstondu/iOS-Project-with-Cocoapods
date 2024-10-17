@@ -10,10 +10,11 @@ import Nuke
 import TinyConstraints
 import UIKit
 
-class ViewController: UIViewController {
+class ImageDemoViewController: UIViewController {
     var headerView: UIView!
     var titleLabel: UILabel!
     var numbersCollectionView: UICollectionView!
+    var imageList: ImageList = ImageList()
 
     var imageLoadTasks: [ImageTask] = []
 
@@ -66,7 +67,7 @@ class ViewController: UIViewController {
         containerView.edgesToSuperview()
 
         var prevItem: UIView?
-        allItems.forEach { item in
+        imageList.images.forEach { item in
             let itemView = UIView()
             itemView.translatesAutoresizingMaskIntoConstraints = false
 
@@ -77,7 +78,7 @@ class ViewController: UIViewController {
             } else {
                 itemView.topToSuperview()
             }
-            if item.url == allItems.last?.url {
+            if item.url == imageList.images.last?.url {
                 itemView.bottomToSuperview()
             }
             prevItem = itemView
@@ -119,10 +120,3 @@ class ViewController: UIViewController {
         super.viewDidLayoutSubviews()
     }
 }
-
-private let allItems = [
-    Item(title: "Baseline JPEG", url: URL(string: "https://user-images.githubusercontent.com/1567433/120257591-80e2e580-c25e-11eb-8032-54f3a966aedb.jpeg")!),
-    Item(title: "Progressive JPEG", url: URL(string: "https://user-images.githubusercontent.com/1567433/120257587-7fb1b880-c25e-11eb-93d1-7e7df2b9f5ca.jpeg")!),
-    Item(title: "Animated GIF", url: URL(string: "https://cloud.githubusercontent.com/assets/1567433/6505557/77ff05ac-c2e7-11e4-9a09-ce5b7995cad0.gif")!),
-    Item(title: "WebP", url: URL(string: "https://kean.github.io/images/misc/4.webp")!),
-]
